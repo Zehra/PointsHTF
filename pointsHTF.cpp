@@ -294,7 +294,7 @@ void pointsHTF::Event ( bz_EventData *eventData )
     }break;
 
     case bz_eTickEvent: {
-      if ((cappingPlayer != -1) && (alive = 1)) {
+      if ((cappingPlayer != -1) && (alive == 1)) {
         int flagID = bz_getPlayerFlagID(cappingPlayer);
         if (flagID != -1) {
             bz_eTeamType flagTeam = flagToTeamValue(bz_getFlagName(flagID).c_str());
